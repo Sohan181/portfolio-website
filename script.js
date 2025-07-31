@@ -54,3 +54,18 @@ document.addEventListener("DOMContentLoaded", function(){
     window.addEventListener("scroll",activeNavLink);
     activeNavLink();
 })
+
+// View my work button 
+document.addEventListener("DOMContentLoaded", function(){
+    const myWorkButton = document.getElementById("myWorkBtn");
+
+    function scrollToProjects(){
+        let projectsection = document.getElementById("projects");
+
+        projectsection.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+    myWorkButton.addEventListener("click", scrollToProjects);
+})
